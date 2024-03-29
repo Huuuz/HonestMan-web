@@ -104,21 +104,24 @@ declare namespace API {
 declare namespace LIST {
 
 
-  type InsertAsset_Response = null;
+  interface Project {
+    id: number,
+    // createdAt: string,
+    // updatedAt: string,
+    superiorId: number,
+    projectName: string,
+    // targetNameUrl: string,
+    // TargetNameIp: string,
+    orgName: string,
+    remark: string,
+    creatTime: string,
+    targetIp: string,
+    targetUrl: string,
+  }
 
-  type GetAllProject_Response = {
-    project: {
-      id: number,
-      createdAt: string,
-      updatedAt: string,
-      superiorId: number,
-      projectName: string,
-      targetNameUrl: string,
-      TargetNameIp: string,
-      orgName: string,
-      remark: string,
-      creatTime: string,
-    }[]
+  type InsertAsset_Response = null;
+  interface GetAllProject_Response {
+    project: Project[];
     total: number
   };
 
@@ -206,7 +209,32 @@ declare namespace LIST {
 
 
 
+  interface Assets {
+    timeRecord: {
+      id: number,
+      createdAt: string,
+      updatedAt: string,
 
+    },
+    id: number,
+    projectId: number,
+    inquire: string,
+    host: string,
+    ip: string,
+    port: string,
+    protocol: string,
+
+    title: string,
+    domain: string,
+    country: string,
+    city: string,
+    link: string,
+    asOrganization: string,
+    survive: string,
+    remark: string,
+    lcp: string,
+
+  }
 
 
 
@@ -220,34 +248,7 @@ declare namespace LIST {
   };
 
   type GetAllAsset_Response = {
-    asset: {
-
-      timeRecord: {
-        id: number,
-        createdAt: string,
-        updatedAt: string,
-
-      },
-      id: number,
-      projectId: number,
-      inquire: string,
-      host: string,
-      ip: string,
-      port: string,
-      protocol: string,
-
-      title: string,
-      domain: string,
-      country: string,
-      city: string,
-      link: string,
-      asOrganization: string,
-      survive: string,
-      remark: string,
-      lcp: string,
-
-
-    }[]
+    asset: Assets[]
     total: number
   };
   type GetAssetById_Response = {

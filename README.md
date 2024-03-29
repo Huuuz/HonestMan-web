@@ -1,3 +1,17 @@
+
+
+如何使用：
+
+1、拉下代码后，到主项目下，（package.json同级），使用yarn 或者 npm i 安装依赖
+2、安装好后使用 yarn dev 或者 npm run dev 启动
+3、默认代理的是本地的8082端口，如果后端端口不是8082 需要在config>proxy.te的 dev 的 target 部分修改
+4、登录界面只要有输入账号密码无论是什么，直接点击登录就可以进去
+5、没有注意事项了
+
+
+
+
+
 # Ant Design Pro
 
 This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.

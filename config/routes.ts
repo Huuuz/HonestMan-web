@@ -54,8 +54,14 @@ export default [
   {
     name: 'list.table-list',
     icon: 'table',
-    path: '/list',
-    component: './HonestMan',
+    path: '/ProjectList',
+    component: './HonestMan-Project',
+  },
+  {
+    name: 'list.basic-list',
+    icon: 'table',
+    path: '/AssetsList',
+    component: './HonestMan-Assets',
   },
   {
     path: '/',
