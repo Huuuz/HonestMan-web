@@ -51,13 +51,16 @@ export async function rule(
   },
   options?: { [key: string]: any },
 ) {
-  return request<API.RuleList>('/api/rule', {
+
+  const res = request<API.RuleList>('/api/rule', {
     method: 'GET',
     params: {
       ...params,
     },
     ...(options || {}),
   });
+  console.log("%c AT-[ res ]-63-「api」", "font-size:13px; background:pink; color:#bf2c9f;", `${new Date()},`,res)
+  return res
 }
 
 /** 更新规则 PUT /api/rule */

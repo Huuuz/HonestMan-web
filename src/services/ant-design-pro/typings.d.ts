@@ -99,3 +99,189 @@ declare namespace API {
     type?: NoticeIconItemType;
   };
 }
+
+
+declare namespace LIST {
+
+
+  type InsertAsset_Response = null;
+
+  type GetAllProject_Response = {
+    project: {
+      id: number,
+      createdAt: string,
+      updatedAt: string,
+      superiorId: number,
+      projectName: string,
+      targetNameUrl: string,
+      TargetNameIp: string,
+      orgName: string,
+      remark: string,
+      creatTime: string,
+    }[]
+    total: number
+  };
+
+  type GetProjectById_Response = {
+    project: {
+      "targetUrl": string,
+      "targetIp": string,
+      id: number,
+      superiorId: number,
+      projectName: string,
+      orgName: string,
+      remark: string,
+      creatTime: string,
+
+      // createdAt: string,
+      // updatedAt: string,
+      // targetNameUrl: string,
+      // TargetNameIp: string,
+    }[]
+    total: number
+  };
+
+  type DeleteProjectById_Response = null;
+
+
+
+
+  type UpdateAssetById_Options = {
+    id: string
+    inquire?: string,
+    host?: string,
+    ip: string,
+    port: string,
+    title?: string;
+    domain?: string;
+    country?: string;
+    city?: string;
+    link?: string;
+    asOrganization?: string;
+    survive?: string;
+    remark?: string;
+    lcp?: string;
+  }
+
+  type UpdateProjectById_Options = {
+    SuperiorID?: string;
+    projectName: string;
+    TargetNameUrl?: string;
+    TargetNameIp?: string;
+    orgName?: string;
+    Remark?: string;
+  };
+  type UpdateProjectById_Response = null;
+
+
+
+
+  type GetAssetByParam_Options = {
+    startDate?: string;
+    endDate?: string;
+    inqure?: string;
+    host?: string;
+    ip?: string;
+    port?: string;
+    protocol?: string;
+    title?: string;
+    domain?: string;
+    country?: string;
+    city?: string;
+    link?: string;
+    asOrganization?: string;
+    survive?: string;
+    lcp?: string;
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  type InsertAsset_Options = {
+    projectName: string;
+    SuperiorID?: string;
+    TargetNameUrl?: string;
+    TargetNameIp?: string;
+    orgName?: string;
+    Remark?: string;
+  };
+
+  type GetAllAsset_Response = {
+    asset: {
+
+      timeRecord: {
+        id: number,
+        createdAt: string,
+        updatedAt: string,
+
+      },
+      id: number,
+      projectId: number,
+      inquire: string,
+      host: string,
+      ip: string,
+      port: string,
+      protocol: string,
+
+      title: string,
+      domain: string,
+      country: string,
+      city: string,
+      link: string,
+      asOrganization: string,
+      survive: string,
+      remark: string,
+      lcp: string,
+
+
+    }[]
+    total: number
+  };
+  type GetAssetById_Response = {
+    asset: {
+
+      timeRecord: {
+        id: number,
+        createdAt: string,
+        updatedAt: string,
+
+      },
+      id: number,
+      projectId: number,
+      inquire: string,
+      host: string,
+      ip: string,
+      port: string,
+      protocol: string,
+
+      title: string,
+      domain: string,
+      country: string,
+      city: string,
+      link: string,
+      asOrganization: string,
+      survive: string,
+      remark: string,
+      lcp: string,
+
+
+    }[]
+    total: number
+  };
+
+  type DeleteAssetById_Response = null
+
+}
