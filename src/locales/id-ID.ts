@@ -2,6 +2,7 @@ import component from './id-ID/component';
 import globalHeader from './id-ID/globalHeader';
 import menu from './id-ID/menu';
 import pages from './id-ID/pages';
+import project from './id-ID/project';
 import pwa from './id-ID/pwa';
 import settingDrawer from './id-ID/settingDrawer';
 import settings from './id-ID/settings';
@@ -22,4 +23,5 @@ export default {
   ...pwa,
   ...component,
   ...pages,
+  ...project,
 };

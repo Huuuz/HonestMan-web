@@ -14,7 +14,8 @@ const initConfig = {
   "logo": "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
   "token": {},
   "splitMenus": false,
-  "siderMenuType": "sub"
+  "siderMenuType": "sub",
+  "footerRender": false
 }
 
 

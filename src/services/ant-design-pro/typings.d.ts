@@ -119,6 +119,7 @@ declare namespace LIST {
     targetUrl: string,
   }
 
+  type InsertProject_Response = null;
   type InsertAsset_Response = null;
   interface GetAllProject_Response {
     project: Project[];

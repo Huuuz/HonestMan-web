@@ -1,5 +1,6 @@
 // @ts-ignore
 /* eslint-disable */
+import { FieldType } from '@/pages/HonestMan-Project';
 import { request } from '@umijs/max';
 
 
@@ -18,7 +19,8 @@ export async function GetProjectById(options: { id: number }) {
     data: LIST.GetProjectById_Response;
   }>('/api/v1/project/GetProjectById/', {
     method: 'GET',
-    ...(options || {}),
+    params: options
+    // ...(options || {}),
   });
 }
 
@@ -40,7 +42,7 @@ export async function DeleteProjectById(options: { id: number }) {
     data: LIST.GetProjectById_Response;
   }>('/api/v1/project/DeleteProjectById', {
     method: 'GET',
-    ...(options || {}),
+    params: options
   });
 }
 
@@ -49,8 +51,8 @@ export async function UpdateProjectById(options: LIST.UpdateProjectById_Options)
   return request<{
     data: LIST.UpdateProjectById_Response;
   }>('/api/v1/project/UpdateProjectById', {
-    method: 'GET',
-    ...(options || {}),
+    method: 'PATCH',
+    data: options
   });
 }
 
@@ -96,6 +98,15 @@ export async function GetAssetByParam(options: LIST.GetAssetByParam_Options) {
 
 
 /** 插⼊Project数据-InsertProject */
+export async function InsertProject(data: FieldType) {
+  return request<{
+    data: LIST.InsertProject_Response;
+  }>('/api/v1/project/InsertProject', {
+    method: 'POST',
+    data: data,
+  });
+}
+/** 插⼊Asset数据-InsertAsset */
 export async function InsertAsset(options?: { [key: string]: any }) {
   return request<{
     data: LIST.InsertAsset_Response;

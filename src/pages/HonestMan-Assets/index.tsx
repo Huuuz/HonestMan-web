@@ -142,7 +142,7 @@ const App: React.FC = () => {
       <Table
         columns={columns}
         dataSource={data}
-        scroll={{ x: 1500 }}
+        scroll={{ x: 100 }}
         // summary={() => (
         //   <Table.Summary fixed={fixedTop ? 'top' : 'bottom'}>
         //     <Table.Summary.Row>

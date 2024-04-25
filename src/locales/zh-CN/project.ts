@@ -1,0 +1,17 @@
+export default {
+  'project.order': '序号',
+  'project.projectName': '项目名称',
+  'project.targetUrl': '域名',
+  'project.targetIp': 'IP',
+  'project.superiorId': '上级组织id',
+  'project.orgName': '组织公司名',
+  'project.remark': '备注',
+  'project.creatTime': '创建时间',
+  'project.operation': '操作',
+  'project.edit': '编辑',
+  'project.view': '查看',
+  'project.delete': '删除',
+  'project.deleteText': '确认是否删除该项目',
+  'project.add': '添加',
+  'project.save': '保存',
+};
